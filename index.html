@@ -131,6 +131,11 @@
   .count-pill{background:var(--green-700);border:1px solid var(--green-line);border-radius:30px;padding:10px 20px;font-family:'Barlow Condensed';font-weight:700;letter-spacing:.04em;text-transform:uppercase}
   .count-pill b{color:var(--red-bright);font-family:'Anton';font-size:1.3rem;margin-right:4px}
   .table-shell{overflow-x:auto;border-radius:14px;border:1px solid rgba(28,107,79,.5)}
+  .sheet-embed{background:#fff;border-radius:14px;border:1px solid rgba(28,107,79,.5);overflow:hidden;box-shadow:var(--shadow)}
+  .sheet-embed iframe{width:100%;height:560px;border:0;display:block}
+  @media(max-width:760px){.sheet-embed iframe{height:460px}}
+  .live-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--red-bright);margin-right:7px;vertical-align:middle;animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,42,34,.55)}70%{box-shadow:0 0 0 8px rgba(255,42,34,0)}100%{box-shadow:0 0 0 0 rgba(255,42,34,0)}}
   table{width:100%;border-collapse:collapse;min-width:640px}
   thead th{background:var(--green-700);text-align:left;padding:16px 20px;font-family:'Barlow Condensed';font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;font-size:.92rem;border-bottom:2px solid var(--red)}
   tbody td{padding:15px 20px;border-bottom:1px solid rgba(28,107,79,.35);color:#e6f1ec}
@@ -276,7 +281,7 @@
         <div class="step"><b>3</b><span data-i18n="step3">Confirma la teva plaça</span></div>
       </div>
       <p data-i18n="s4_p">Les places són limitades.</p>
-      <a class="btn btn-white" href="#" target="_blank" rel="noopener" data-i18n="btn_form">Obrir el formulari d'inscripció →</a>
+      <a class="btn btn-white" href="https://forms.gle/UW5iy4z14ic4EDez5" target="_blank" rel="noopener" data-i18n="btn_form">Obrir el formulari d'inscripció →</a>
     </div>
   </div>
 </section>
@@ -291,22 +296,12 @@
       <p data-i18n="s5_p">Aquests són els equips que ja han formalitzat la seva inscripció.</p>
     </div>
     <div class="table-actions reveal d1">
-      <div class="count-pill"><b id="teamCount">0</b> <span data-i18n="count_lbl">EQUIPS INSCRITS</span></div>
-      <a class="btn btn-ghost" style="padding:12px 22px;font-size:1rem" href="#" target="_blank" rel="noopener" data-i18n="btn_full">Veure la llista completa →</a>
+      <div class="count-pill"><span class="live-dot"></span><span data-i18n="live_lbl">Actualització en directe</span></div>
+      <a class="btn btn-ghost" style="padding:12px 22px;font-size:1rem" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSH8mzxZ0Nv-cJ6JMyL33RdOBJFVrGrmzzp5HpVPXDFwfbplq9bczCZOcBVIKbWNuUBKB5Cy7C168c4/pubhtml?gid=699419212&amp;single=true" target="_blank" rel="noopener" data-i18n="btn_full">Veure la llista completa →</a>
     </div>
-    <div class="table-shell reveal d2">
-      <table id="entryTable">
-        <thead><tr>
-          <th data-i18n="th_num">#</th><th data-i18n="th_team">Equip</th><th data-i18n="th_drivers">Pilots</th><th data-i18n="th_car">Cotxe</th><th data-i18n="th_cat">Categoria</th>
-        </tr></thead>
-        <tbody>
-          <tr><td><span class="dossard">#55</span></td><td>Renown Racing</td><td>—</td><td>Mazda 787B</td><td><span class="tag-cat">GR. C</span></td></tr>
-          <tr><td><span class="dossard">#1</span></td><td>Llinars Endurance</td><td>—</td><td>Porsche 962C</td><td><span class="tag-cat">GR. C</span></td></tr>
-          <tr><td><span class="dossard">#7</span></td><td>Slotmania Team</td><td>—</td><td>Jaguar XJR-9</td><td><span class="tag-cat">GR. C</span></td></tr>
-        </tbody>
-      </table>
+    <div class="sheet-embed reveal d2">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSH8mzxZ0Nv-cJ6JMyL33RdOBJFVrGrmzzp5HpVPXDFwfbplq9bczCZOcBVIKbWNuUBKB5Cy7C168c4/pubhtml?gid=699419212&amp;single=true&amp;widget=true&amp;headers=false" title="Inscrits · 24 Hores Llinars del Vallès" loading="lazy"></iframe>
     </div>
-    <p class="embed-note" data-i18n="embed_note"></p>
   </div>
 </section>
 
@@ -375,7 +370,7 @@ const I18N={
   s4_p:"Les places són limitades. Completa el formulari d'inscripció de Google amb les dades de l'equip i dels pilots. Rebràs la confirmació per correu i el teu equip apareixerà a la llista d'inscrits.",
   btn_form:"Obrir el formulari d'inscripció →",
   s5_num:"05 — INSCRITS",s5_h2:"Equips confirmats",s5_p:"Aquests són els equips que ja han formalitzat la seva inscripció per a les 24 Hores Llinars del Vallès.",
-  count_lbl:"EQUIPS INSCRITS",btn_full:"Veure la llista completa →",
+  count_lbl:"EQUIPS INSCRITS",live_lbl:"Actualització en directe",btn_full:"Veure la llista completa →",
   th_num:"#",th_team:"Equip",th_drivers:"Pilots",th_car:"Cotxe",th_cat:"Categoria",
   embed_note:"Per mostrar la llista en directe pots publicar el teu Google Sheet (<code>Fitxer → Comparteix → Publica al web</code>) i incrustar-lo aquí amb un <code>&lt;iframe&gt;</code>, o connectar les dades per CSV.",
   foot_brand_p:"Campionat Europeu Grup C d'Slot. Organitza el Club Slot Llinars · 24 Hores d'Slot 2026.",
@@ -407,7 +402,7 @@ const I18N={
   s4_p:"Las plazas son limitadas. Completa el formulario de inscripción de Google con los datos del equipo y de los pilotos. Recibirás la confirmación por correo y tu equipo aparecerá en la lista de inscritos.",
   btn_form:"Abrir formulario de inscripción →",
   s5_num:"05 — INSCRITOS",s5_h2:"Equipos confirmados",s5_p:"Estos son los equipos que ya han formalizado su inscripción para las 24 Hores Llinars del Vallès.",
-  count_lbl:"EQUIPOS INSCRITOS",btn_full:"Ver lista completa →",
+  count_lbl:"EQUIPOS INSCRITOS",live_lbl:"Actualización en directo",btn_full:"Ver lista completa →",
   th_num:"#",th_team:"Equipo",th_drivers:"Pilotos",th_car:"Coche",th_cat:"Categoría",
   embed_note:"Para mostrar la lista en directo puedes publicar tu Google Sheet (<code>Archivo → Compartir → Publicar en la web</code>) e incrustarlo aquí con un <code>&lt;iframe&gt;</code>, o conectar los datos por CSV.",
   foot_brand_p:"Campeonato Europeo Grupo C de Slot. Organiza el Club Slot Llinars · 24 Hores d'Slot 2026.",
@@ -439,7 +434,7 @@ const I18N={
   s4_p:"Places are limited. Complete the Google registration form with your team and driver details. You'll receive a confirmation by email and your team will appear on the entry list.",
   btn_form:"Open registration form →",
   s5_num:"05 — ENTRY LIST",s5_h2:"Confirmed teams",s5_p:"These are the teams that have already confirmed their entry for the 24 Hores Llinars del Vallès.",
-  count_lbl:"TEAMS REGISTERED",btn_full:"View full list →",
+  count_lbl:"TEAMS REGISTERED",live_lbl:"Live updates",btn_full:"View full list →",
   th_num:"#",th_team:"Team",th_drivers:"Drivers",th_car:"Car",th_cat:"Category",
   embed_note:"To show the list live you can publish your Google Sheet (<code>File → Share → Publish to web</code>) and embed it here with an <code>&lt;iframe&gt;</code>, or connect the data via CSV.",
   foot_brand_p:"Group C Slot European Championship. Organised by Club Slot Llinars · 24 Hores d'Slot 2026.",
@@ -471,7 +466,7 @@ const I18N={
   s4_p:"Les places sont limitées. Remplissez le formulaire d'inscription Google avec les informations de l'équipe et des pilotes. Vous recevrez une confirmation par e-mail et votre équipe figurera sur la liste des inscrits.",
   btn_form:"Ouvrir le formulaire d'inscription →",
   s5_num:"05 — INSCRITS",s5_h2:"Équipes confirmées",s5_p:"Voici les équipes ayant déjà confirmé leur inscription aux 24 Hores Llinars del Vallès.",
-  count_lbl:"ÉQUIPES INSCRITES",btn_full:"Voir la liste complète →",
+  count_lbl:"ÉQUIPES INSCRITES",live_lbl:"Mise à jour en direct",btn_full:"Voir la liste complète →",
   th_num:"#",th_team:"Équipe",th_drivers:"Pilotes",th_car:"Voiture",th_cat:"Catégorie",
   embed_note:"Pour afficher la liste en direct, vous pouvez publier votre Google Sheet (<code>Fichier → Partager → Publier sur le web</code>) et l'intégrer ici avec une <code>&lt;iframe&gt;</code>, ou connecter les données via CSV.",
   foot_brand_p:"Championnat d'Europe Groupe C de Slot. Organisé par le Club Slot Llinars · 24 Hores d'Slot 2026.",
@@ -503,7 +498,7 @@ const I18N={
   s4_p:"I posti sono limitati. Compila il modulo di iscrizione Google con i dati della squadra e dei piloti. Riceverai la conferma via e-mail e la tua squadra apparirà nell'elenco degli iscritti.",
   btn_form:"Apri il modulo di iscrizione →",
   s5_num:"05 — ISCRITTI",s5_h2:"Squadre confermate",s5_p:"Queste sono le squadre che hanno già formalizzato l'iscrizione alle 24 Hores Llinars del Vallès.",
-  count_lbl:"SQUADRE ISCRITTE",btn_full:"Vedi l'elenco completo →",
+  count_lbl:"SQUADRE ISCRITTE",live_lbl:"Aggiornamento in diretta",btn_full:"Vedi l'elenco completo →",
   th_num:"#",th_team:"Squadra",th_drivers:"Piloti",th_car:"Vettura",th_cat:"Categoria",
   embed_note:"Per mostrare l'elenco in diretta puoi pubblicare il tuo Google Sheet (<code>File → Condividi → Pubblica sul web</code>) e incorporarlo qui con un <code>&lt;iframe&gt;</code>, oppure collegare i dati tramite CSV.",
   foot_brand_p:"Campionato Europeo Gruppo C di Slot. Organizza il Club Slot Llinars · 24 Hores d'Slot 2026.",
@@ -572,8 +567,6 @@ links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.clas
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('.hero .reveal').forEach(el=>setTimeout(()=>el.classList.add('in'),60));
-const rows=document.querySelectorAll('#entryTable tbody tr').length;const counter=document.getElementById('teamCount');
-let n=0;const t=setInterval(()=>{n++;counter.textContent=n;if(n>=rows)clearInterval(t);},120);
 </script>
 </body>
 </html>
