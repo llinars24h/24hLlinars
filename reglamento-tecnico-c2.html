@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reglamento Técnico C2 · Grupo C — 24 Hores Llinars del Vallès</title>
+<meta name="description" content="Reglamento técnico Grupo C Slot.it Ready · 24 Hores Llinars del Vallès. v1.7 — Mayo 2025. ES / EN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-900:#062018;--green-800:#0a3326;--green-700:#0e4030;--green-600:#13513c;
+    --green-line:#1c6b4f;--red:#e8201a;--red-bright:#ff2a22;--red-deep:#b3140f;
+    --cream:#f4efe4;--white:#fff;--muted:#9fc4b3;--shadow:0 24px 60px rgba(0,0,0,.45);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Barlow',sans-serif;background:var(--green-900);color:var(--cream);-webkit-font-smoothing:antialiased;line-height:1.65}
+  ::selection{background:var(--red);color:#fff}
+  h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;line-height:.95}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  /* language toggle */
+  .t.en{display:none}
+  body.lang-en .t.es{display:none}
+  body.lang-en .t.en{display:inline}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(6,32,24,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(28,107,79,.4)}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Barlow Condensed';font-weight:800;font-size:1.18rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;text-decoration:none}
+  .brand .badge{background:var(--red);color:#fff;font-family:'Anton';font-size:.8rem;padding:4px 8px 2px;border-radius:4px;line-height:1}
+  .nav-actions{display:flex;align-items:center;gap:12px}
+  .nav-actions a{font-family:'Barlow Condensed';font-weight:700;letter-spacing:.05em;text-transform:uppercase;font-size:.95rem;text-decoration:none}
+  .nav-back{color:var(--muted)}
+  .nav-back:hover{color:#fff}
+  .nav-pdf{background:var(--red);color:#fff;padding:9px 14px 7px;border-radius:6px}
+  .nav-pdf:hover{background:var(--red-bright)}
+  .lang-sw{display:flex;border:1px solid var(--green-line);border-radius:6px;overflow:hidden}
+  .lang-sw button{background:transparent;color:var(--muted);border:0;font-family:'Barlow Condensed';font-weight:700;letter-spacing:.06em;padding:8px 11px;cursor:pointer;font-size:.9rem}
+  .lang-sw button.active{background:var(--red);color:#fff}
+  @media(max-width:640px){.brand{font-size:.95rem}.nav-back span{display:none}}
+
+  /* HERO */
+  header.hero{position:relative;padding:140px 0 60px;background:radial-gradient(900px 500px at 85% 10%,var(--green-700),transparent 60%),linear-gradient(160deg,var(--green-800),var(--green-900) 75%);overflow:hidden}
+  #ribbons{position:absolute;inset:0;width:100%;height:100%;opacity:.85;pointer-events:none}
+  .hero-inner{position:relative;z-index:5}
+  .kicker{font-family:'Barlow Condensed';font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);font-size:.95rem;margin-bottom:10px}
+  header.hero h1{font-size:clamp(2.6rem,7vw,5rem);text-transform:uppercase;color:#fff}
+  header.hero h1 .r{color:var(--red)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:22px;align-items:center}
+  .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--green-line);background:rgba(14,64,48,.6);border-radius:30px;padding:8px 16px;font-family:'Barlow Condensed';font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.9rem}
+  .chip b{color:var(--red-bright);font-family:'Anton'}
+  .grc{display:inline-flex;flex-direction:column;align-items:center;border:2px solid var(--red);border-radius:8px;padding:6px 14px 4px;background:rgba(6,32,24,.4)}
+  .grc .g{font-family:'Anton';color:var(--red);font-size:1.5rem;line-height:1}
+  .grc small{font-family:'Barlow Condensed';font-weight:700;letter-spacing:.22em;font-size:.55rem;color:var(--cream)}
+
+  .divider-stripe{height:6px;background:repeating-linear-gradient(90deg,var(--red) 0 40px,transparent 40px 80px,var(--green-line) 80px 120px,transparent 120px 160px)}
+
+  /* LAYOUT */
+  .doc-layout{display:grid;grid-template-columns:250px 1fr;gap:48px;padding:60px 0 40px}
+  @media(max-width:900px){.doc-layout{grid-template-columns:1fr;gap:24px}}
+
+  .toc{position:sticky;top:90px;align-self:start;font-family:'Barlow Condensed';max-height:calc(100vh - 110px);overflow:auto}
+  .toc h4{font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-size:.82rem;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(28,107,79,.5)}
+  .toc a{display:block;color:var(--muted);text-decoration:none;font-weight:600;font-size:1.02rem;padding:7px 0 7px 14px;border-left:2px solid transparent;transition:.18s;letter-spacing:.02em}
+  .toc a:hover{color:#fff}
+  .toc a.active{color:#fff;border-left-color:var(--red)}
+  .toc a .n{color:var(--red);font-family:'Anton';font-size:.78rem;margin-right:8px}
+  @media(max-width:900px){
+    .toc{position:static;max-height:none;background:rgba(14,64,48,.45);border:1px solid rgba(28,107,79,.5);border-radius:12px;padding:18px 20px}
+    .toc-wrap{display:flex;flex-wrap:wrap;gap:4px 18px}
+    .toc a{padding:5px 0}
+  }
+
+  .content{max-width:780px}
+  section.block{scroll-margin-top:90px;margin-bottom:46px}
+  section.block .head{display:flex;align-items:baseline;gap:14px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(28,107,79,.45)}
+  section.block .head .num{font-family:'Anton';color:var(--red);font-size:1.3rem;letter-spacing:.05em}
+  section.block h2{font-size:clamp(1.6rem,3.6vw,2.2rem);text-transform:uppercase;color:#fff}
+  .content p{margin:0 0 14px;color:#e3efe8;font-size:1.06rem}
+  .content p strong,.content li strong{color:#fff}
+  .hl{color:#fff;background:linear-gradient(transparent 55%,rgba(232,32,26,.32) 55%);padding:0 2px;font-weight:600}
+  .callout{border-left:4px solid var(--red);background:rgba(179,20,15,.14);border-radius:0 10px 10px 0;padding:14px 18px;margin:16px 0;color:#ffe7e5;font-size:1.02rem}
+  .callout b{color:#fff}
+  .spec{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(28,107,79,.6);border-radius:6px;padding:1px 8px;font-family:'Barlow Condensed';font-weight:700;letter-spacing:.02em;color:#fff;font-size:.96em}
+  a.reflink{color:var(--red-bright);text-decoration:none;border-bottom:1px dotted rgba(255,42,34,.5);word-break:break-all;font-size:.96rem}
+  a.reflink:hover{color:#fff;border-bottom-style:solid}
+  .reflist{margin:10px 0 0;padding-left:0;list-style:none}
+  .reflist li{margin-bottom:6px;padding-left:18px;position:relative}
+  .reflist li::before{content:'↳';position:absolute;left:0;color:var(--muted)}
+
+  .model-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:6px}
+  .model-grid .m{background:rgba(14,64,48,.55);border:1px solid rgba(28,107,79,.5);border-radius:8px;padding:11px 14px;font-family:'Barlow Condensed';font-weight:600;letter-spacing:.02em;font-size:1.02rem;display:flex;align-items:center;gap:9px}
+  .model-grid .m::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--red);flex:0 0 auto}
+
+  .annex{display:flex;flex-direction:column;gap:16px}
+  .annex .card{background:rgba(14,64,48,.5);border:1px solid rgba(28,107,79,.5);border-radius:12px;padding:22px 24px;border-top:3px solid var(--red)}
+  .annex .card h3{font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#fff;font-size:1.3rem;margin-bottom:10px}
+  .annex .card p{font-size:1.02rem;margin-bottom:10px}
+
+  footer{background:var(--green-900);padding:54px 0 30px;border-top:1px solid rgba(28,107,79,.4);margin-top:30px}
+  .foot-top{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:center}
+  .foot-brand .display{font-size:2rem;color:#fff;text-transform:uppercase;line-height:.9}
+  .foot-brand .display .r{color:var(--red)}
+  .foot-brand p{color:var(--muted);margin-top:8px;font-size:.95rem}
+  .foot-back{font-family:'Barlow Condensed';font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;text-decoration:none;border:2px solid rgba(255,255,255,.4);border-radius:8px;padding:12px 22px}
+  .foot-back:hover{border-color:#fff;background:rgba(255,255,255,.07)}
+  .copyright{text-align:center;margin-top:34px;color:var(--muted);font-size:.85rem}
+  .copyright .r{color:var(--red)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="index.html"><span class="badge">24H</span> LLINARS · <span class="t es">REGLAMENTO C2</span><span class="t en">C2 REGULATIONS</span></a>
+  <div class="nav-actions">
+    <div class="lang-sw">
+      <button data-l="es">ES</button><button data-l="en">EN</button>
+    </div>
+    <a class="nav-back" href="index.html">← <span class="t es">Volver a la web</span><span class="t en">Back to site</span></a>
+    <a class="nav-pdf" href="reglamento-tecnico-grupo-c.pdf" target="_blank" rel="noopener">PDF</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg id="ribbons" preserveAspectRatio="none"></svg>
+  <div class="wrap hero-inner">
+    <div class="kicker">24 Hores Llinars del Vallès · Slot.it Ready</div>
+    <h1><span class="t es">Reglamento Técnico</span><span class="t en">Technical Regulations</span><br><span class="r"><span class="t es">Grupo C · C2</span><span class="t en">Group C · C2</span></span></h1>
+    <div class="hero-meta">
+      <span class="chip"><b>v1.7</b> <span class="t es">Mayo 2025</span><span class="t en">May 2025</span></span>
+      <span class="chip"><span class="t es">17 modelos homologados</span><span class="t en">17 homologated models</span></span>
+      <span class="chip"><b>C2</b></span>
+      <span class="grc"><span class="g">GR.C</span><small>SLOT.IT READY</small></span>
+    </div>
+  </div>
+</header>
+
+<div class="divider-stripe"></div>
+
+<div class="wrap">
+  <div class="doc-layout">
+
+    <aside class="toc">
+      <h4><span class="t es">Índice</span><span class="t en">Contents</span></h4>
+      <div class="toc-wrap">
+        <a href="#modelos"><span class="n">01</span><span class="t es">Modelos homologados</span><span class="t en">Homologated models</span></a>
+        <a href="#carroceria"><span class="n">02</span><span class="t es">Carrocería</span><span class="t en">Bodywork</span></a>
+        <a href="#chasis"><span class="n">03</span><span class="t es">Chasis</span><span class="t en">Chassis</span></a>
+        <a href="#soporte"><span class="n">04</span><span class="t es">Soporte motor</span><span class="t en">Motor mount</span></a>
+        <a href="#suspensiones"><span class="n">05</span><span class="t es">Suspensiones</span><span class="t en">Suspensions</span></a>
+        <a href="#neumaticos"><span class="n">06</span><span class="t es">Neumáticos</span><span class="t en">Tyres</span></a>
+        <a href="#llantas"><span class="n">07</span><span class="t es">Llantas</span><span class="t en">Wheels</span></a>
+        <a href="#tornilleria"><span class="n">08</span><span class="t es">Tornillería</span><span class="t en">Hardware</span></a>
+        <a href="#transmision"><span class="n">09</span><span class="t es">Transmisión</span><span class="t en">Transmission</span></a>
+        <a href="#ejes"><span class="n">10</span><span class="t es">Ejes y stopper</span><span class="t en">Axles &amp; stopper</span></a>
+        <a href="#guia"><span class="n">11</span><span class="t es">Guía, trencillas y cables</span><span class="t en">Guide, braids &amp; leads</span></a>
+        <a href="#lastre"><span class="n">12</span><span class="t es">Lastre</span><span class="t en">Ballast</span></a>
+        <a href="#motor"><span class="n">13</span><span class="t es">Motor</span><span class="t en">Motor</span></a>
+        <a href="#anexo"><span class="n">14</span><span class="t es">Anexo por modelo</span><span class="t en">Annex by model</span></a>
+        <a href="#final"><span class="n">15</span><span class="t es">Disposiciones finales</span><span class="t en">Final provisions</span></a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="callout" style="margin-bottom:30px"><span class="t es"><b>Versión provisional.</b> El reglamento técnico de la categoría C2 está pendiente de confirmar sus particularidades; de momento coincide con el de C1.</span><span class="t en"><b>Provisional version.</b> The C2 technical regulations are pending confirmation of their specifics; for now they match C1.</span></div>
+
+      <section class="block" id="modelos">
+        <div class="head"><span class="num">01</span><h2><span class="t es">Modelos homologados</span><span class="t en">Homologated models</span></h2></div>
+        <div class="model-grid">
+          <div class="m">Porsche 956c LH</div><div class="m">Porsche 956c KH</div><div class="m">Porsche 962c LH</div>
+          <div class="m">Porsche 962c 85</div><div class="m">Porsche 962c KH</div><div class="m">Porsche 962 IMSA</div>
+          <div class="m">Porsche 962c 90</div><div class="m">Toyota 88c</div><div class="m">Toyota 86c (Long Tail)</div>
+          <div class="m">Mercedes Sauber C9</div><div class="m">Mazda 787B</div><div class="m">Nissan R89C/R90V</div>
+          <div class="m">Lancia LC2/84</div><div class="m">Lancia LC2/85</div><div class="m">Jaguar XJR6/XJR9</div>
+          <div class="m">Jaguar XJR12</div><div class="m">Jaguar XJR10/11</div>
+        </div>
+      </section>
+
+      <section class="block" id="carroceria">
+        <div class="head"><span class="num">02</span><h2><span class="t es">Carrocería</span><span class="t en">Bodywork</span></h2></div>
+        <p><span class="t es">La carrocería será de serie, sin modificación alguna. El habitáculo será el original de cada modelo. Se permitirán los recambios de "cockpit" aligerados de nueva referencia, <span class="hl">pero los habitáculos de lexán están expresamente prohibidos</span>.</span><span class="t en">The bodywork shall be standard, without any modification. The cockpit shall be the original one for each model. Lightweight "cockpit" replacement parts of the new reference are allowed, <span class="hl">but lexan cockpits are expressly prohibited</span>.</span></p>
+        <div class="callout"><span class="t es">El <b>peso mínimo de la carrocería será de 18 gramos</b> incluyendo todas las piezas. Los modelos que no lleguen a dicho peso mínimo se podrán lastrar por el interior de la carrocería a una altura mínima de 5 milímetros y siempre que no interfiera con el chasis.</span><span class="t en">The <b>minimum body weight shall be 18 grams</b> including all parts. Models that do not reach this minimum weight may be ballasted inside the body at a minimum height of 5 millimetres, provided it does not interfere with the chassis.</span></div>
+        <p><span class="t es">Se permitirán además los recambios específicos de cada modelo denominados "crashproof". Las carrocerías deberán ir debidamente pintadas en caso de ser "white kit". La decoración será libre. Se permite prescindir de retrovisores, limpias y ganchos de remolque. Se permite llevar pintadas las tulipas y eliminar el faro interior (las bombillas) en todos los modelos. Algunos modelos requieren la eliminación de piezas o modificaciones que se especifican en el anexo de carrocerías al final del reglamento.</span><span class="t en">The model-specific "crashproof" replacement parts are also allowed. Bodies must be properly painted if they are a "white kit". Livery is free. Mirrors, wipers and tow hooks may be omitted. Headlight lenses may be painted over and the interior light (the bulbs) may be removed on all models. Some models require removing parts or making modifications specified in the bodywork annex at the end of the regulations.</span></p>
+        <p><span class="t es">Se permite el refuerzo del soporte del alerón mediante cinta o pegamento siempre que no altere la estética del vehículo ni su forma original. Deberá ir situado en su posición original y en caso de rotura deberá repararse y situarse en su posición normal de la mejor manera posible antes de que termine la manga en curso.</span><span class="t en">Reinforcing the wing mount with tape or glue is allowed, provided it does not alter the car's appearance or its original shape. It must be in its original position and, in the event of breakage, it must be repaired and placed back in its normal position as best as possible before the current heat ends.</span></p>
+      </section>
+
+      <section class="block" id="chasis">
+        <div class="head"><span class="num">03</span><h2><span class="t es">Chasis</span><span class="t en">Chassis</span></h2></div>
+        <p><span class="t es">El chasis será de serie, tanto los denominados <span class="spec">evo 4</span> como <span class="spec">evo 6</span>, con 4 o 6 puntos de anclaje. Deberán respetar las medidas originales y únicamente se permite eliminar las rebabas perimetrales que puedan limitar o interferir en la correcta basculación de cuna o carrocería. Deberá respetar las formas originales y no presentar deformaciones. Chasis y cuna deberán estar en el mismo plano.</span><span class="t en">The chassis shall be standard, both the so-called <span class="spec">evo 4</span> and <span class="spec">evo 6</span>, with 4 or 6 mounting points. They must respect the original dimensions and only the removal of perimeter burrs that may limit or interfere with the correct float of the pod or body is allowed. It must respect the original shapes and show no deformation. Chassis and pod must be on the same plane.</span></p>
+      </section>
+
+      <section class="block" id="soporte">
+        <div class="head"><span class="num">04</span><h2><span class="t es">Soporte motor</span><span class="t en">Motor mount</span></h2></div>
+        <p><span class="t es">El soporte motor o cuna deberá ser "anglewinder" y de "offset" 0, la cuna negra. De 4 o 6 puntos de apoyo y de estricta serie. Deberá estar apoyada sobre el chasis y en el mismo plano que el chasis. Las referencias homologadas serán: <span class="spec">CH61</span> (hard), <span class="spec">CH76</span> (medium). Queda homologada la bancada en <strong>"carbon fiber" CH61c</strong>.</span><span class="t en">The motor mount or pod shall be "anglewinder" and offset 0, the black pod. With 4 or 6 support points and strictly standard. It must rest on the chassis and be on the same plane as the chassis. The homologated references are: <span class="spec">CH61</span> (hard), <span class="spec">CH76</span> (medium). The <strong>"carbon fiber" CH61c</strong> pod is also homologated.</span></p>
+        <p><span class="t es">Los cojinetes serán los esféricos originales de Slot.it <span class="spec">CH61</span> o <span class="spec">CH76</span>. Se permite encolarlos a su alojamiento pero no modificar su posición.</span><span class="t en">The bushings shall be the original Slot.it spherical ones, <span class="spec">CH61</span> or <span class="spec">CH76</span>. They may be glued into their housing but their position may not be modified.</span></p>
+        <div class="callout"><span class="t es"><b>La cuna con rodamientos a bolas está expresamente prohibida.</b></span><span class="t en"><b>A pod with ball bearings is expressly prohibited.</b></span></div>
+      </section>
+
+      <section class="block" id="suspensiones">
+        <div class="head"><span class="num">05</span><h2><span class="t es">Suspensiones</span><span class="t en">Suspensions</span></h2></div>
+        <p><span class="t es">Las suspensiones serán libres, de muelles o imanes. Se permiten tornillos y muelles de otras marcas siempre que no impliquen modificar el alojamiento de los mismos. <span class="hl">Los puentes o brazos fotograbados complementarios de las suspensiones deberán ser Slot.it</span>, las tuercas o copas de los amortiguadores serán libres. No se permite mezclar imanes y muelles en un mismo amortiguador. Se permite el uso de suspensiones en los soportes laterales y traseros, <strong>no así en los delanteros</strong>.</span><span class="t en">Suspensions are free, either spring or magnet. Screws and springs from other brands are allowed provided they do not require modifying their housing. <span class="hl">The complementary photo-etched bridges or arms of the suspensions must be Slot.it</span>; the damper nuts or cups are free. Mixing magnets and springs in the same damper is not allowed. The use of suspensions on the side and rear supports is allowed, <strong>but not on the front ones</strong>.</span></p>
+      </section>
+
+      <section class="block" id="neumaticos">
+        <div class="head"><span class="num">06</span><h2><span class="t es">Neumáticos</span><span class="t en">Tyres</span></h2></div>
+        <p><span class="t es">Los neumáticos delanteros serán obligatoriamente Slot.it con referencia <span class="spec">PT15</span>, <span class="spec">PT19</span> y <span class="spec">PT1214</span>. Se podrán lijar o rebajar siempre que se mantengan planos. No se permite ningún tratamiento o barniz.</span><span class="t en">The front tyres must compulsorily be Slot.it with reference <span class="spec">PT15</span>, <span class="spec">PT19</span> and <span class="spec">PT1214</span>. They may be sanded or trued provided they remain flat. No treatment or varnish is allowed.</span></p>
+        <p><span class="t es">Los neumáticos traseros serán los <span class="spec">PT1171F22</span> de Slot.it.</span><span class="t en">The rear tyres shall be the Slot.it <span class="spec">PT1171F22</span>.</span></p>
+        <ul class="reflist"><li><a class="reflink" href="http://catalog.slot.it/product/product-details/?id=4882&parent=476" target="_blank" rel="noopener">catalog.slot.it · PT1171F22</a></li></ul>
+      </section>
+
+      <section class="block" id="llantas">
+        <div class="head"><span class="num">07</span><h2><span class="t es">Llantas</span><span class="t en">Wheels</span></h2></div>
+        <p><span class="t es">Las llantas delanteras podrán ser de plástico, aluminio o magnesio siempre en medidas <span class="spec">15,8 × 8 mm</span>. Se permite el uso de separadores entre la llanta y el chasis siempre que no sobresalgan de la carrocería en plano cenital.</span><span class="t en">The front wheels may be plastic, aluminium or magnesium, always in <span class="spec">15.8 × 8 mm</span>. Spacers between the wheel and the chassis are allowed provided they do not protrude beyond the body in top-down view.</span></p>
+        <p><span class="t es">Las llantas traseras podrán ser de aluminio o magnesio con medidas <span class="spec">15,8 × 8</span> o <span class="spec">15,8 × 10 mm</span>. El conjunto llanta y neumático no podrá sobresalir de la carrocería vista ésta desde un plano cenital, excepto lo mínimo indispensable en modelos que sea imposible de cumplir.</span><span class="t en">The rear wheels may be aluminium or magnesium, with sizes <span class="spec">15.8 × 8</span> or <span class="spec">15.8 × 10 mm</span>. The wheel-and-tyre assembly may not protrude beyond the body when viewed from above, except for the bare minimum on models where it is impossible to comply.</span></p>
+        <p><span class="t es">Las llantas serán de Slot.it y deberán llevar tapacubos obligatoriamente de diseño original de Grupo C. En su defecto se permitirán tapacubos de diseño BBS. Se permite eliminar los discos de freno de los tapacubos. <strong>No se permite el uso de tapacubos planos (4WD) de Slot.it de DTM o LMP.</strong></span><span class="t en">The wheels shall be Slot.it and must compulsorily carry wheel inserts of an original Group C design. Failing that, BBS-design inserts are allowed. The brake discs of the inserts may be removed. <strong>The use of flat (4WD) Slot.it inserts from DTM or LMP is not allowed.</strong></span></p>
+      </section>
+
+      <section class="block" id="tornilleria">
+        <div class="head"><span class="num">08</span><h2><span class="t es">Tornillería</span><span class="t en">Hardware</span></h2></div>
+        <p><span class="t es">La tornillería de motor, cuna y carrocería será libre, así como la empleada en el tren delantero, siempre que sean metálicos. Únicamente se permite la tornillería de nylon o de metacrilato en los tornillos que sujetan la carrocería.</span><span class="t en">The screws for motor, pod and body are free, as is the hardware used on the front axle, provided they are metal. Only nylon or acrylic screws are allowed for the screws that hold the body.</span></p>
+      </section>
+
+      <section class="block" id="transmision">
+        <div class="head"><span class="num">09</span><h2><span class="t es">Transmisión</span><span class="t en">Transmission</span></h2></div>
+        <p><span class="t es">El piñón será de 12 dientes y <strong>6,5 mm</strong> con referencia <span class="spec">PI6512e</span> (ergal) o <span class="spec">PS12</span> (latón).</span><span class="t en">The pinion shall be 12 teeth and <strong>6.5 mm</strong> with reference <span class="spec">PI6512e</span> (ergal) or <span class="spec">PS12</span> (brass).</span></p>
+        <p><span class="t es">La corona será libre de aluminio o nylon de 16 mm de diámetro con número de dientes libre entre los <strong>26z y 31z</strong>: <span class="spec">GA16xxe</span> y <span class="spec">GA16xxPl</span>.</span><span class="t en">The crown gear is free, aluminium or nylon, 16 mm in diameter, with a free number of teeth between <strong>26z and 31z</strong>: <span class="spec">GA16xxe</span> and <span class="spec">GA16xxPl</span>.</span></p>
+        <p><span class="t es">Se permite el uso de separadores en el tren trasero entre el cojinete y la corona así como el "stopper" y el cojinete o cuna.</span><span class="t en">Spacers may be used on the rear axle between the bushing and the crown, as well as the "stopper" and the bushing or pod.</span></p>
+      </section>
+
+      <section class="block" id="ejes">
+        <div class="head"><span class="num">10</span><h2><span class="t es">Ejes y stopper</span><span class="t en">Axles &amp; stopper</span></h2></div>
+        <p><span class="t es">De carácter libre, deberán de ser de acero, huecos o macizos. <strong>No podrán ser dorados, ni de carbono o titanio.</strong></span><span class="t en">Free, but they must be steel, hollow or solid. <strong>They may not be gold-coloured, nor carbon or titanium.</strong></span></p>
+        <p><span class="t es">El "stopper" será libre pero obligatorio, y podrá ir situado al lado contrario de la corona o en el puente central del soporte de motor; deberá ser de aluminio.</span><span class="t en">The "stopper" is free but compulsory, and may be placed on the opposite side of the crown or on the central bridge of the motor mount; it must be aluminium.</span></p>
+        <p><span class="t es">El tren delantero podrá regularse mediante tornillos "allen" inferiores o superiores. Se permite el uso de soportes de plástico inferiores o en el interior de los puentes del tren delantero, así como el uso de cojinetes <span class="spec">CH14</span> o <span class="spec">CH56b</span> en el interior de los puentes.</span><span class="t en">The front axle may be adjusted by means of lower or upper allen screws. The use of lower plastic supports or supports inside the front-axle bridges is allowed, as well as the use of <span class="spec">CH14</span> or <span class="spec">CH56b</span> bushings inside the bridges.</span></p>
+      </section>
+
+      <section class="block" id="guia">
+        <div class="head"><span class="num">11</span><h2><span class="t es">Guía, trencillas y cables</span><span class="t en">Guide, braids &amp; leads</span></h2></div>
+        <p><span class="t es">La guía será Slot.it con referencias: <span class="spec">CH66</span>, <span class="spec">CH26</span> (negra o gris), <span class="spec">CH10</span> o <span class="spec">CH85</span> en todas sus variantes (CH85d). Se permite lijar la pala de la guía tanto en grosor como en profundidad.</span><span class="t en">The guide shall be Slot.it with references: <span class="spec">CH66</span>, <span class="spec">CH26</span> (black or grey), <span class="spec">CH10</span> or <span class="spec">CH85</span> in all its variants (CH85d). Sanding the guide blade in both thickness and depth is allowed.</span></p>
+        <p><span class="t es">Las trencillas y los cables serán libres. Se permite pelar los cables desde el tren delantero hasta la guía siendo obligatorio que la funda sobrepase el eje delantero a fin de evitar cortocircuitos.</span><span class="t en">Braids and leads are free. Stripping the wires from the front axle to the guide is allowed, it being compulsory that the sheath extends past the front axle in order to avoid short circuits.</span></p>
+      </section>
+
+      <section class="block" id="lastre">
+        <div class="head"><span class="num">12</span><h2><span class="t es">Lastre</span><span class="t en">Ballast</span></h2></div>
+        <p><span class="t es">Sólo se permite lastre en la carrocería en los coches que no lleguen al peso mínimo, especificando su ubicación en el apartado de carrocería. <strong>No se permite lastre en el chasis.</strong></span><span class="t en">Ballast is only allowed in the body on cars that do not reach the minimum weight, specifying its location in the bodywork section. <strong>Ballast in the chassis is not allowed.</strong></span></p>
+      </section>
+
+      <section class="block" id="motor">
+        <div class="head"><span class="num">13</span><h2>Motor</h2></div>
+        <p><span class="t es">Boxer 2 de Slot.it con referencia <span class="spec">MN08CH</span> (una ventana).</span><span class="t en">Slot.it Boxer 2 with reference <span class="spec">MN08CH</span> (one window).</span></p>
+        <p><span class="t es">El motor irá montado con la ventana orientada hacia el interior del coche, es decir, hacia arriba.</span><span class="t en">The motor shall be mounted with the window facing the inside of the car, i.e. facing upwards.</span></p>
+      </section>
+
+      <section class="block" id="anexo">
+        <div class="head"><span class="num">14</span><h2><span class="t es">Anexo · Modificaciones permitidas por modelo</span><span class="t en">Annex · Permitted modifications by model</span></h2></div>
+        <p><span class="t es">Los elementos no especificados en este anexo se considerarán de carácter obligatorio; únicamente está permitido eliminar los retrovisores, limpias y ganchos de arrastre. Está permitido el uso de recambios ligeros como alerones incluidos en los "crashproof". <span class="hl">Las modificaciones necesarias y no incluidas deberán ser comunicadas a la organización para su inclusión y homologación; de lo contrario no estarán permitidas.</span></span><span class="t en">Items not specified in this annex are considered compulsory; only the removal of mirrors, wipers and tow hooks is allowed. The use of lightweight replacement parts such as wings included in the "crashproof" is allowed. <span class="hl">Necessary modifications not included here must be reported to the organisation for inclusion and homologation; otherwise they will not be allowed.</span></span></p>
+
+        <div class="annex">
+          <div class="card">
+            <h3><span class="t es">Porsche 956c, 962c y variantes</span><span class="t en">Porsche 956c, 962c and variants</span></h3>
+            <p><span class="t es">En los modelos antiguos de carrocería, al cambiar el "cockpit" por el recambio ligero es necesario eliminar los radiadores laterales puesto que van reproducidos sobre la carrocería. En modelos más modernos es obligatorio mantener los radiadores laterales para evitar dejar un agujero en el pontón lateral. Se permite también eliminar el alerón delantero de las versiones KH que lo incluyan. Se permite eliminar la rejilla trasera de los Porsche 956 HD que la incluyan. Se permite eliminar la pestaña que entorpece el libre movimiento del tornillo trasero en las versiones de 956 actualizadas.</span><span class="t en">On the older body versions, when replacing the "cockpit" with the lightweight part it is necessary to remove the side radiators since they are reproduced on the body. On more modern models it is compulsory to keep the side radiators to avoid leaving a hole in the side pod. The front wing of the KH versions that include it may also be removed. The rear grille of the Porsche 956 HD that include it may be removed. The tab that hinders the free movement of the rear screw on the updated 956 versions may be removed.</span></p>
+            <ul class="reflist">
+              <li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Porsche_962_IMSA.pdf" target="_blank" rel="noopener">Porsche 962 IMSA · <span class="t es">montaje</span><span class="t en">assembly</span></a></li>
+              <li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Porsche_956_LH.pdf" target="_blank" rel="noopener">Porsche 956 LH · <span class="t es">montaje</span><span class="t en">assembly</span></a></li>
+              <li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Porsche_956_KH.pdf" target="_blank" rel="noopener">Porsche 956 KH · <span class="t es">montaje</span><span class="t en">assembly</span></a></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Mercedes Sauber C9</h3>
+            <p><span class="t es">Se considera obligatorio mantener los detalles delanteros ubicados en la parte delantera del chasis evo 6. Se permite eliminar los tubos de escape, ya estén situados en la carrocería o en el chasis, así como el depósito de aceite situado bajo el alerón que no permite montar las suspensiones laterales y traseras correctamente. También se permite limar por el interior las partes más bajas de las tomas de aire traseras delante del alerón. El alerón debe conservar toda su estructura.</span><span class="t en">Keeping the front details located at the front of the evo 6 chassis is considered compulsory. Removing the exhaust pipes — whether on the body or on the chassis — is allowed, as is the oil tank located under the wing that prevents the side and rear suspensions from being fitted correctly. Filing, from the inside, the lowest parts of the rear air intakes in front of the wing is also allowed. The wing must keep its entire structure.</span></p>
+            <ul class="reflist"><li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Sauber_C9.pdf" target="_blank" rel="noopener">Sauber C9 · <span class="t es">montaje</span><span class="t en">assembly</span></a></li></ul>
+          </div>
+
+          <div class="card">
+            <h3>Mazda 787B</h3>
+            <p><span class="t es">Existen dos carrocerías con cambios sustanciales en los laterales dependiendo de las versiones de chasis evo 4 y evo 6. Deberá respetarse la paridad de carrocería con el chasis, no pudiéndose cambiar en ningún sentido. El recambio de chasis evo 6 incluye los laterales que deben ser empleados en la versión evo 6 de carrocería. Se permitirá limar la carrocería evo 4 para adaptarle el chasis evo 6 siempre que se haga sin excesos, sin chapuzas y de forma correcta. Quedará a juicio del verificador.</span><span class="t en">There are two bodies with substantial changes to the sides depending on the evo 4 and evo 6 chassis versions. Body-to-chassis parity must be respected and may not be swapped in either direction. The evo 6 chassis replacement includes the side panels that must be used on the evo 6 body version. Filing the evo 4 body to adapt the evo 6 chassis is allowed, provided it is done without excess, without botched work and correctly. This is at the scrutineer's discretion.</span></p>
+          </div>
+
+          <div class="card">
+            <h3>Jaguar XJR6 / 9 / 12</h3>
+            <p><span class="t es">Se permite eliminar el carenado de las ruedas traseras así como limar y eliminar los anclajes de los mismos de manera que no molesten con los neumáticos. Se permite eliminar el panel lateral interior de los XJR9 así como los trapecios de suspensión traseros y el motor simulado de la parte superior de la carrocería. La toma de aire del freno situada sobre la corona se permite también eliminarla o limarla para evitar que roce con la corona. Los tubos de escape deben permanecer y se permite encolarlos al alerón para evitar que se rompan con la flexión del mismo. Se permite eliminar el "spoiler" delantero del XJR12 en fotograbado.</span><span class="t en">Removing the rear wheel fairings is allowed, as is filing and removing their mounts so that they do not interfere with the tyres. Removing the inner side panel of the XJR9 is allowed, as well as the rear suspension wishbones and the dummy motor on the top of the body. The brake air intake located above the crown may also be removed or filed to prevent it from rubbing against the crown. The exhaust pipes must remain and may be glued to the wing to prevent them from breaking with its flexing. The photo-etched front "spoiler" of the XJR12 may be removed.</span></p>
+          </div>
+
+          <div class="card">
+            <h3>Nissan R89C / R90V</h3>
+            <p><span class="t es">Se permite eliminar el carenado de las ruedas traseras y las derivas aerodinámicas interiores de los laterales con los escapes que impiden el uso de amortiguadores laterales.</span><span class="t en">Removing the rear wheel fairings and the inner aerodynamic fins of the sides with the exhausts that prevent the use of side dampers is allowed.</span></p>
+            <ul class="reflist"><li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Nissan_R89C.pdf" target="_blank" rel="noopener">Nissan R89C · <span class="t es">montaje</span><span class="t en">assembly</span></a></li></ul>
+          </div>
+
+          <div class="card">
+            <h3>Lancia LC2 1984</h3>
+            <p><span class="t es">Se permite eliminar la tapa del radiador delantero situado en posición horizontal. Se permite eliminar las derivas verticales sobre los faros delanteros, así como el alerón delantero en las versiones que lo incorporen.</span><span class="t en">Removing the front radiator cover located in a horizontal position is allowed. Removing the vertical fins above the headlights is allowed, as well as the front wing on the versions that include it.</span></p>
+            <ul class="reflist">
+              <li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Lancia_LC2_84.pdf" target="_blank" rel="noopener">Lancia LC2 84 · <span class="t es">montaje</span><span class="t en">assembly</span></a></li>
+              <li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Lancia_LC2_88.pdf" target="_blank" rel="noopener">Lancia LC2 88 · <span class="t es">montaje</span><span class="t en">assembly</span></a></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Jaguar XJR10</h3>
+            <p><span class="t es">Se permite eliminar las suspensiones simuladas traseras y el radiador derecho que impide el correcto desempeño de la suspensión. Se permite también eliminar los carenados de las ruedas traseras. Se permite eliminar también la pieza que cubre los huecos sobre el capó motor y que no viene en muchos recambios de carrocería.</span><span class="t en">Removing the dummy rear suspensions and the right radiator that hinders the correct operation of the suspension is allowed. Removing the rear wheel fairings is also allowed. The part covering the gaps over the engine cover, which does not come with many body replacements, may also be removed.</span></p>
+            <ul class="reflist"><li><a class="reflink" href="http://slot.it/wp-content/uploads/2022/12/XJR10.pdf" target="_blank" rel="noopener">Jaguar XJR10 · <span class="t es">montaje</span><span class="t en">assembly</span></a></li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="final">
+        <div class="head"><span class="num">15</span><h2><span class="t es">Disposiciones finales</span><span class="t en">Final provisions</span></h2></div>
+        <div class="callout"><span class="t es">Los aspectos no reflejados en el presente reglamento están <b>prohibidos</b>. En caso de duda de interpretación, éstas quedarán sujetas al criterio de Dirección de Carrera.</span><span class="t en">Anything not covered in these regulations is <b>prohibited</b>. In case of doubt over interpretation, it shall be subject to the discretion of Race Direction.</span></div>
+        <p><span class="t es">El incumplimiento del mismo será motivo de aviso y corrección por parte del equipo infractor antes o durante las verificaciones, y antes o durante la disputa de la prueba en caso de ser detectada la irregularidad. En caso de haber sido ya iniciada la carrera y dependiendo de la gravedad, además de la corrección el aviso puede llevar añadida una penalización.</span><span class="t en">Any breach will be grounds for a warning and correction by the offending team before or during scrutineering, and before or during the running of the event if the irregularity is detected. If the race has already started, depending on the severity, in addition to the correction the warning may carry an added penalty.</span></p>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="display"><span class="r">24</span> HORES LLINARS DEL VALLÈS</div>
+        <p><span class="t es">Reglamento Técnico Grupo C · v1.7 — Mayo 2025 · Club Slot Llinars</span><span class="t en">Group C Technical Regulations · v1.7 — May 2025 · Club Slot Llinars</span></p>
+      </div>
+      <a class="foot-back" href="index.html"><span class="t es">← Volver a la web</span><span class="t en">← Back to site</span></a>
+    </div>
+    <div class="copyright"><span class="r">●</span> Club Slot Llinars · 24 Hores Llinars del Vallès · Grupo C — Slot.it Ready</div>
+  </div>
+</footer>
+
+<script>
+/* ribbon background */
+(function(){
+  const svg=document.getElementById('ribbons');const W=1440,H=520;
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  const NS='http://www.w3.org/2000/svg';const lines=34;
+  for(let i=0;i<lines;i++){
+    const baseY=H*0.30+i*8;const amp=46+Math.sin(i*0.4)*26;const phase=i*0.2;
+    let d='M -50 '+baseY;
+    for(let x=0;x<=W+50;x+=22){const y=baseY+Math.sin((x/170)+phase)*amp*(0.35+0.65*(x/W))-(x/W)*70;d+=' L '+x+' '+y.toFixed(1);}
+    const p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('fill','none');
+    p.setAttribute('stroke','#e8201a');p.setAttribute('stroke-width','1');
+    p.setAttribute('opacity',(0.05+(i/lines)*0.28).toFixed(2));svg.appendChild(p);
+  }
+})();
+
+/* language switch */
+function setLang(l){
+  const en = (l==='en');
+  document.body.classList.toggle('lang-en', en);
+  document.documentElement.lang = en ? 'en' : 'es';
+  document.title = en
+    ? "Technical Regulations C2 · Group C — 24 Hores Llinars del Vallès"
+    : "Reglamento Técnico C2 · Grupo C — 24 Hores Llinars del Vallès";
+  document.querySelectorAll('.lang-sw button').forEach(b=>b.classList.toggle('active', b.dataset.l===l));
+  try{localStorage.setItem('reglaLang', l);}catch(e){}
+}
+(function(){
+  let l; try{l=localStorage.getItem('reglaLang');}catch(e){}
+  if(!l){const n=(navigator.language||'es').slice(0,2).toLowerCase(); l=(n==='en')?'en':'es';}
+  setLang(l);
+  document.querySelectorAll('.lang-sw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
+})();
+
+/* scroll-spy for TOC */
+const tocLinks=[...document.querySelectorAll('.toc a')];
+const map={};tocLinks.forEach(a=>map[a.getAttribute('href').slice(1)]=a);
+const spy=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      tocLinks.forEach(a=>a.classList.remove('active'));
+      const a=map[e.target.id];if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-90px 0px -65% 0px',threshold:0});
+document.querySelectorAll('section.block').forEach(s=>spy.observe(s));
+</script>
+</body>
+</html>
