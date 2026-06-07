@@ -116,7 +116,8 @@
   .doc .txt span{color:var(--muted);font-size:.92rem}
 
   .signup{background:linear-gradient(135deg,var(--red-deep),var(--red));border-radius:20px;padding:54px 44px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
-  .signup::after{content:'GR.C';position:absolute;right:-10px;bottom:-30px;font-family:'Anton';font-size:11rem;color:rgba(255,255,255,.08);line-height:1}
+  .signup::after{content:'GR.C';position:absolute;right:-10px;bottom:-30px;font-family:'Anton';font-size:11rem;color:rgba(255,255,255,.08);line-height:1;pointer-events:none}
+  .signup>*{position:relative;z-index:1}
   .signup .num{color:#ffd9d7}
   .signup h2{font-size:clamp(2rem,5vw,3.2rem);color:#fff;text-transform:uppercase;font-family:'Anton';font-weight:400}
   .signup p{color:#ffe2e0;max-width:560px;margin:16px 0 28px;font-size:1.12rem;line-height:1.55}
@@ -266,8 +267,9 @@
     </div>
     <div class="doc-grid">
       <a class="doc reveal d1" href="reglamento-deportivo.html"><div class="pdf">WEB</div><div class="txt"><h3 data-i18n="doc1_h">Reglament esportiu</h3><span data-i18n="doc1_s"></span></div></a>
-      <a class="doc reveal d2" href="reglamento-tecnico.html"><div class="pdf">WEB</div><div class="txt"><h3 data-i18n="doc2_h">Reglament tècnic</h3><span data-i18n="doc2_s"></span></div></a>
-      <a class="doc reveal d3" href="#" target="_blank" rel="noopener"><div class="pdf">PDF</div><div class="txt"><h3 data-i18n="doc3_h">Verificacions</h3><span data-i18n="doc3_s"></span></div></a>
+      <a class="doc reveal d2" href="reglamento-tecnico-c1.html"><div class="pdf">C1</div><div class="txt"><h3 data-i18n="doc2_h">Reglament tècnic C1</h3><span data-i18n="doc2_s"></span></div></a>
+      <a class="doc reveal d3" href="reglamento-tecnico-c2.html"><div class="pdf">C2</div><div class="txt"><h3 data-i18n="doc4_h">Reglament tècnic C2</h3><span data-i18n="doc4_s"></span></div></a>
+      <a class="doc reveal d4" href="#" target="_blank" rel="noopener"><div class="pdf">PDF</div><div class="txt"><h3 data-i18n="doc3_h">Verificacions</h3><span data-i18n="doc3_s"></span></div></a>
     </div>
   </div>
 </section>
@@ -368,7 +370,7 @@ const I18N={
   sch3_t:"DG · 23",sch3_e:"Bandera a quadres i lliurament de premis",sch3_s:"Final de les 24 hores i podi",
   sch_note:"* Horari provisional. El cronograma definitiu es publicarà juntament amb el reglament de la prova.",
   s3_num:"03 — REGLAMENTS",s3_h2:"Normativa de la prova",s3_p:"Descarrega tota la documentació oficial abans d'inscriure el teu equip. Llegeix-la amb atenció: les verificacions tècniques són estrictes.",
-  doc1_h:"Reglament esportiu",doc1_s:"Format, equips, rellevaments i puntuació",doc2_h:"Reglament tècnic",doc2_s:"Especificacions Grup C · Slot.it Ready",doc3_h:"Verificacions",doc3_s:"Checklist tècnic i horaris",
+  doc1_h:"Reglament esportiu",doc1_s:"Format, equips, rellevaments i puntuació",doc2_h:"Reglament tècnic C1",doc2_s:"Categoria C1 · Grup C Slot.it Ready",doc4_h:"Reglament tècnic C2",doc4_s:"Categoria C2 · Grup C Slot.it Ready",doc3_h:"Verificacions",doc3_s:"Checklist tècnic i horaris",
   s4_num:"04 — INSCRIPCIÓ",s4_h2:"Inscriu el teu equip",step1:"Llegeix els reglaments",step2:"Omple el formulari",step3:"Confirma la teva plaça",
   s4_p:"Les places són limitades. Completa el formulari d'inscripció de Google amb les dades de l'equip i dels pilots. Rebràs la confirmació per correu i el teu equip apareixerà a la llista d'inscrits.",
   btn_form:"Obrir el formulari d'inscripció →",
@@ -400,7 +402,7 @@ const I18N={
   sch3_t:"DOM · 23",sch3_e:"Bandera a cuadros y entrega de premios",sch3_s:"Final de las 24 horas y podio",
   sch_note:"* Horario provisional. El cronograma definitivo se publicará junto con el reglamento de la prueba.",
   s3_num:"03 — REGLAMENTOS",s3_h2:"Normativa de la prueba",s3_p:"Descarga toda la documentación oficial antes de inscribir a tu equipo. Léela con atención: las verificaciones técnicas son estrictas.",
-  doc1_h:"Reglamento deportivo",doc1_s:"Formato, equipos, relevos y puntuación",doc2_h:"Reglamento técnico",doc2_s:"Especificaciones Grupo C · Slot.it Ready",doc3_h:"Verificaciones",doc3_s:"Checklist técnico y horarios",
+  doc1_h:"Reglamento deportivo",doc1_s:"Formato, equipos, relevos y puntuación",doc2_h:"Reglamento técnico C1",doc2_s:"Categoría C1 · Grupo C Slot.it Ready",doc4_h:"Reglamento técnico C2",doc4_s:"Categoría C2 · Grupo C Slot.it Ready",doc3_h:"Verificaciones",doc3_s:"Checklist técnico y horarios",
   s4_num:"04 — INSCRIPCIÓN",s4_h2:"Inscribe a tu equipo",step1:"Lee los reglamentos",step2:"Rellena el formulario",step3:"Confirma tu plaza",
   s4_p:"Las plazas son limitadas. Completa el formulario de inscripción de Google con los datos del equipo y de los pilotos. Recibirás la confirmación por correo y tu equipo aparecerá en la lista de inscritos.",
   btn_form:"Abrir formulario de inscripción →",
@@ -432,7 +434,7 @@ const I18N={
   sch3_t:"SUN · 23",sch3_e:"Chequered flag and prize-giving",sch3_s:"End of the 24 hours and podium",
   sch_note:"* Provisional schedule. The final timetable will be published together with the event regulations.",
   s3_num:"03 — REGULATIONS",s3_h2:"Event regulations",s3_p:"Download all the official documentation before registering your team. Read it carefully: technical scrutineering is strict.",
-  doc1_h:"Sporting regulations",doc1_s:"Format, teams, driver changes and scoring",doc2_h:"Technical regulations",doc2_s:"Group C specifications · Slot.it Ready",doc3_h:"Scrutineering",doc3_s:"Technical checklist and timings",
+  doc1_h:"Sporting regulations",doc1_s:"Format, teams, driver changes and scoring",doc2_h:"Technical regulations C1",doc2_s:"Category C1 · Group C Slot.it Ready",doc4_h:"Technical regulations C2",doc4_s:"Category C2 · Group C Slot.it Ready",doc3_h:"Scrutineering",doc3_s:"Technical checklist and timings",
   s4_num:"04 — REGISTRATION",s4_h2:"Register your team",step1:"Read the regulations",step2:"Fill in the form",step3:"Confirm your place",
   s4_p:"Places are limited. Complete the Google registration form with your team and driver details. You'll receive a confirmation by email and your team will appear on the entry list.",
   btn_form:"Open registration form →",
@@ -464,7 +466,7 @@ const I18N={
   sch3_t:"DIM · 23",sch3_e:"Drapeau à damier et remise des prix",sch3_s:"Fin des 24 heures et podium",
   sch_note:"* Horaire provisoire. Le programme définitif sera publié avec le règlement de l'épreuve.",
   s3_num:"03 — RÈGLEMENTS",s3_h2:"Règlement de l'épreuve",s3_p:"Téléchargez toute la documentation officielle avant d'inscrire votre équipe. Lisez-la attentivement : les vérifications techniques sont strictes.",
-  doc1_h:"Règlement sportif",doc1_s:"Format, équipes, relais et points",doc2_h:"Règlement technique",doc2_s:"Spécifications Groupe C · Slot.it Ready",doc3_h:"Vérifications",doc3_s:"Checklist technique et horaires",
+  doc1_h:"Règlement sportif",doc1_s:"Format, équipes, relais et points",doc2_h:"Règlement technique C1",doc2_s:"Catégorie C1 · Groupe C Slot.it Ready",doc4_h:"Règlement technique C2",doc4_s:"Catégorie C2 · Groupe C Slot.it Ready",doc3_h:"Vérifications",doc3_s:"Checklist technique et horaires",
   s4_num:"04 — INSCRIPTION",s4_h2:"Inscrivez votre équipe",step1:"Lisez les règlements",step2:"Remplissez le formulaire",step3:"Confirmez votre place",
   s4_p:"Les places sont limitées. Remplissez le formulaire d'inscription Google avec les informations de l'équipe et des pilotes. Vous recevrez une confirmation par e-mail et votre équipe figurera sur la liste des inscrits.",
   btn_form:"Ouvrir le formulaire d'inscription →",
@@ -496,7 +498,7 @@ const I18N={
   sch3_t:"DOM · 23",sch3_e:"Bandiera a scacchi e premiazione",sch3_s:"Fine delle 24 ore e podio",
   sch_note:"* Orario provvisorio. Il programma definitivo sarà pubblicato insieme al regolamento della prova.",
   s3_num:"03 — REGOLAMENTI",s3_h2:"Regolamento della prova",s3_p:"Scarica tutta la documentazione ufficiale prima di iscrivere la tua squadra. Leggila con attenzione: le verifiche tecniche sono rigorose.",
-  doc1_h:"Regolamento sportivo",doc1_s:"Formato, squadre, cambi pilota e punteggio",doc2_h:"Regolamento tecnico",doc2_s:"Specifiche Gruppo C · Slot.it Ready",doc3_h:"Verifiche",doc3_s:"Checklist tecnica e orari",
+  doc1_h:"Regolamento sportivo",doc1_s:"Formato, squadre, cambi pilota e punteggio",doc2_h:"Regolamento tecnico C1",doc2_s:"Categoria C1 · Gruppo C Slot.it Ready",doc4_h:"Regolamento tecnico C2",doc4_s:"Categoria C2 · Gruppo C Slot.it Ready",doc3_h:"Verifiche",doc3_s:"Checklist tecnica e orari",
   s4_num:"04 — ISCRIZIONE",s4_h2:"Iscrivi la tua squadra",step1:"Leggi i regolamenti",step2:"Compila il modulo",step3:"Conferma il tuo posto",
   s4_p:"I posti sono limitati. Compila il modulo di iscrizione Google con i dati della squadra e dei piloti. Riceverai la conferma via e-mail e la tua squadra apparirà nell'elenco degli iscritti.",
   btn_form:"Apri il modulo di iscrizione →",
