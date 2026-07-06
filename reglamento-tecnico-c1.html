@@ -109,7 +109,11 @@
   .foot-back:hover{border-color:#fff;background:rgba(255,255,255,.07)}
   .copyright{text-align:center;margin-top:34px;color:var(--muted);font-size:.85rem}
   .copyright .r{color:var(--red)}
-</style>
+
+  .pdf-dl{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:1.05rem;padding:14px 24px;border-radius:8px;text-decoration:none;transition:transform .15s ease,background .2s ease;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+  .pdf-dl:hover{background:var(--red-bright);transform:translateY(-2px)}
+  .pdf-dl svg{width:20px;height:20px;flex:0 0 auto}
+  </style>
 </head>
 <body>
 
@@ -120,7 +124,7 @@
       <button data-l="es">ES</button><button data-l="en">EN</button>
     </div>
     <a class="nav-back" href="index.html">← <span class="t es">Volver a la web</span><span class="t en">Back to site</span></a>
-    <a class="nav-pdf" href="reglamento-tecnico-grupo-c.pdf" target="_blank" rel="noopener">PDF</a>
+    <a class="nav-pdf" href="reglamento-tecnico-c1.pdf" download target="_blank" rel="noopener">PDF</a>
   </div>
 </nav>
 
@@ -135,6 +139,7 @@
       <span class="chip"><b>C1</b></span>
       <span class="grc"><span class="g">GR.C</span><small>SLOT.IT READY</small></span>
     </div>
+    <a class="pdf-dl" href="reglamento-tecnico-c1.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span class="t es">Descargar reglamento en PDF</span><span class="t en">Download regulations (PDF)</span></a>
   </div>
 </header>
 
