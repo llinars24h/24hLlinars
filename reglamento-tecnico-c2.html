@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reglamento Técnico C2 · Grupo C — 24 Hores Llinars del Vallès</title>
-<meta name="description" content="Reglamento técnico Grupo C Slot.it Ready · 24 Hores Llinars del Vallès. v1.7 — Mayo 2025. ES / EN.">
+<meta name="description" content="Reglamento técnico Grupo C Slot.it Ready · 24 Hores Llinars del Vallès. v2.0 — Julio 2026. ES / EN.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -113,7 +113,15 @@
   .pdf-dl{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:1.05rem;padding:14px 24px;border-radius:8px;text-decoration:none;transition:transform .15s ease,background .2s ease;box-shadow:0 12px 30px rgba(0,0,0,.35)}
   .pdf-dl:hover{background:var(--red-bright);transform:translateY(-2px)}
   .pdf-dl svg{width:20px;height:20px;flex:0 0 auto}
-  </style>
+    .car-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:10px}
+  .car{background:#fff;border:1px solid var(--green-line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+  .car img{width:100%;height:auto;display:block;padding:10px 10px 2px}
+  .car figcaption{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.03em;color:#0a3326;background:#f4efe4;text-align:center;padding:8px;font-size:.98rem;text-transform:uppercase;margin-top:auto}
+  .fig.fig-part{max-width:230px;margin:16px 0 0}
+  .fig{margin:16px 0 0;background:#fff;border:1px solid var(--green-line);border-radius:10px;padding:10px;max-width:600px}
+  .fig img{width:100%;height:auto;display:block;border-radius:4px}
+  .fig figcaption{font-size:.85rem;color:#0a3326;margin-top:8px;font-style:italic;font-weight:600}
+</style>
 </head>
 <body>
 
@@ -134,8 +142,8 @@
     <div class="kicker">24 Hores Llinars del Vallès · Slot.it Ready</div>
     <h1><span class="t es">Reglamento Técnico</span><span class="t en">Technical Regulations</span><br><span class="r"><span class="t es">Grupo C · C2</span><span class="t en">Group C · C2</span></span></h1>
     <div class="hero-meta">
-      <span class="chip"><b>v1.7</b> <span class="t es">Mayo 2025</span><span class="t en">May 2025</span></span>
-      <span class="chip"><span class="t es">17 modelos homologados</span><span class="t en">17 homologated models</span></span>
+      <span class="chip"><b>v2.0</b> <span class="t es">Julio 2026</span><span class="t en">July 2026</span></span>
+      <span class="chip"><span class="t es">18 modelos homologados</span><span class="t en">18 homologated models</span></span>
       <span class="chip"><b>C2</b></span>
       <span class="grc"><span class="g">GR.C</span><small>SLOT.IT READY</small></span>
     </div>
@@ -174,13 +182,25 @@
 
       <section class="block" id="modelos">
         <div class="head"><span class="num">01</span><h2><span class="t es">Modelos homologados</span><span class="t en">Homologated models</span></h2></div>
-        <div class="model-grid">
-          <div class="m">Porsche 956c LH</div><div class="m">Porsche 956c KH</div><div class="m">Porsche 962c LH</div>
-          <div class="m">Porsche 962c 85</div><div class="m">Porsche 962c KH</div><div class="m">Porsche 962 IMSA</div>
-          <div class="m">Porsche 962c 90</div><div class="m">Toyota 88c</div><div class="m">Toyota 86c (Long Tail)</div>
-          <div class="m">Mercedes Sauber C9</div><div class="m">Mazda 787B</div><div class="m">Mazda 767B 230 </div><div class="m">Nissan R89C/R90V</div>
-          <div class="m">Lancia LC2/84</div><div class="m">Lancia LC2/85</div><div class="m">Jaguar XJR6/XJR9</div>
-          <div class="m">Jaguar XJR12</div>
+        <div class="car-grid">
+          <figure class="car"><img src="img/c1/models/porsche-956-lh.jpg" alt="Porsche 956C LH" loading="lazy"><figcaption>Porsche 956C LH</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/porsche-956-kh.jpg" alt="Porsche 956C KH" loading="lazy"><figcaption>Porsche 956C KH</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/porsche-962-lh.jpg" alt="Porsche 962C LH" loading="lazy"><figcaption>Porsche 962C LH</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/porsche-962-85.jpg" alt="Porsche 962C 85" loading="lazy"><figcaption>Porsche 962C 85</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/porsche-962-kh.jpg" alt="Porsche 962C KH" loading="lazy"><figcaption>Porsche 962C KH</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/porsche-962-imsa.jpg" alt="Porsche 962 IMSA" loading="lazy"><figcaption>Porsche 962 IMSA</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/porsche-962-90.jpg" alt="Porsche 962C 90" loading="lazy"><figcaption>Porsche 962C 90</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/toyota-88c.jpg" alt="Toyota 88C" loading="lazy"><figcaption>Toyota 88C</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/toyota-86c.jpg" alt="Toyota 86C (Long Tail)" loading="lazy"><figcaption>Toyota 86C (Long Tail)</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/sauber-c9.jpg" alt="Mercedes Sauber C9" loading="lazy"><figcaption>Mercedes Sauber C9</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/mazda-787b.jpg" alt="Mazda 787B" loading="lazy"><figcaption>Mazda 787B</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/mazda-767b.jpg" alt="Mazda 767B" loading="lazy"><figcaption>Mazda 767B</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/nissan-r89c.jpg" alt="Nissan R89C / R90V" loading="lazy"><figcaption>Nissan R89C / R90V</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/lancia-lc2-84.jpg" alt="Lancia LC2/84" loading="lazy"><figcaption>Lancia LC2/84</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/lancia-lc2-85.jpg" alt="Lancia LC2/85" loading="lazy"><figcaption>Lancia LC2/85</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/jaguar-xjr6.jpg" alt="Jaguar XJR6" loading="lazy"><figcaption>Jaguar XJR6</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/jaguar-xjr9.jpg" alt="Jaguar XJR9" loading="lazy"><figcaption>Jaguar XJR9</figcaption></figure>
+          <figure class="car"><img src="img/c1/models/jaguar-xjr12.jpg" alt="Jaguar XJR12" loading="lazy"><figcaption>Jaguar XJR12</figcaption></figure>
         </div>
       </section>
 
@@ -200,21 +220,23 @@
       <section class="block" id="soporte">
         <div class="head"><span class="num">04</span><h2><span class="t es">Soporte motor</span><span class="t en">Motor mount</span></h2></div>
         <p><span class="t es">El soporte motor o cuna deberá ser <strong>"en ángulo"</strong> y de <strong>"offset" 0,5 mm</strong>, la cuna gris. De 4 puntos de apoyo y de estricta serie. Deberá estar apoyada sobre el chasis y en el mismo plano que el chasis. La referencia homologada será: <span class="spec">CH60b2 / CH60c1</span>.</span><span class="t en">The motor mount or pod shall be <strong>"anglewinder"</strong> and <strong>offset 0.5 mm</strong>, the grey pod. With support points and strictly standard. It must rest on the chassis and be on the same plane as the chassis. The homologated reference is: <span class="spec">CH60b2 / CH60c1</span>.</span></p>
-        <p><span class="t es">Los cojinetes serán los originales de Slot.it correspondientes al soporte <span class="spec">CH60b2 / CH60c1
- </span>. Se permite encolarlos a su alojamiento pero no modificar su posición.</span><span class="t en">The bushings shall be the original Slot.it ones for the <span class="spec">CH60b2 / CH60c1</span> mount. They may be glued into their housing but their position may not be modified.</span></p>
+        <p><span class="t es">Los cojinetes serán los esféricos originales de Slot.it <span class="spec">CH14</span> o <span class="spec">CH56b</span>. Se permite encolarlos a su alojamiento pero no modificar su posición.</span><span class="t en">The bushings shall be the original Slot.it spherical ones, <span class="spec">CH14</span> or <span class="spec">CH56b</span>. They may be glued into their housing but their position may not be modified.</span></p>
         <div class="callout"><span class="t es"><b>La cuna con rodamientos a bolas está expresamente prohibida.</b></span><span class="t en"><b>A pod with ball bearings is expressly prohibited.</b></span></div>
+              <figure class="fig fig-part" style="max-width:320px"><img src="img/c2/parts/soporte.jpg" alt="Soporte motor «anglewinder» offset 0,5 (cuna gris)" loading="lazy"><figcaption><span class="t es">Soporte motor «anglewinder» offset 0,5 (cuna gris)</span><span class="t en">Anglewinder motor mount, offset 0.5 (grey pod)</span></figcaption></figure>
       </section>
 
       <section class="block" id="suspensiones">
         <div class="head"><span class="num">05</span><h2><span class="t es">Suspensiones</span><span class="t en">Suspensions</span></h2></div>
         <p><span class="t es">Las suspensiones serán libres, de muelles o imanes. Se permiten tornillos y muelles de otras marcas siempre que no impliquen modificar el alojamiento de los mismos. <span class="hl">Los puentes o brazos fotograbados complementarios de las suspensiones deberán ser Slot.it</span>, las tuercas o copas de los amortiguadores serán libres. No se permite mezclar imanes y muelles en un mismo amortiguador. Se permite el uso de suspensiones en los soportes laterales y traseros, <strong>no así en los delanteros</strong>.</span><span class="t en">Suspensions are free, either spring or magnet. Screws and springs from other brands are allowed provided they do not require modifying their housing. <span class="hl">The complementary photo-etched bridges or arms of the suspensions must be Slot.it</span>; the damper nuts or cups are free. Mixing magnets and springs in the same damper is not allowed. The use of suspensions on the side and rear supports is allowed, <strong>but not on the front ones</strong>.</span></p>
+              <figure class="fig fig-part"><img src="img/c1/parts/suspensiones.jpg" alt="Componentes de suspensión Slot.it" loading="lazy"><figcaption><span class="t es">Componentes de suspensión Slot.it</span><span class="t en">Slot.it suspension components</span></figcaption></figure>
       </section>
 
       <section class="block" id="neumaticos">
         <div class="head"><span class="num">06</span><h2><span class="t es">Neumáticos</span><span class="t en">Tyres</span></h2></div>
-        <p><span class="t es">Los neumáticos delanteros serán obligatoriamente Slot.it con referencia <span class="spec">PT15</span>, <span class="spec">PT19</span> y <span class="spec">PT1214</span>. No se permite ningún tratamiento o barniz.</span><span class="t en">The front tyres must compulsorily be Slot.it with reference <span class="spec">PT15</span>, <span class="spec">PT19</span> and <span class="spec">PT1214</span>. No treatment or varnish is allowed.</span></p>
-        <p><span class="t es">Los neumáticos traseros serán los <span class="spec">PT1207F22</span> de Slot.it.</span><span class="t en">The rear tyres shall be the Slot.it <span class="spec">PT12074F22</span>.</span></p>
+        <p><span class="t es">Los neumáticos delanteros serán obligatoriamente Slot.it con referencia <span class="spec">PT15</span>, <span class="spec">PT19</span> y <span class="spec">PT1214</span>. Se podrán lijar o rebajar siempre que se mantengan planos. No se permite ningún tratamiento o barniz.</span><span class="t en">The front tyres must compulsorily be Slot.it with reference <span class="spec">PT15</span>, <span class="spec">PT19</span> and <span class="spec">PT1214</span>. They may be sanded or reduced provided they stay flat. No treatment or varnish is allowed.</span></p>
+        <p><span class="t es">Los neumáticos traseros serán los <span class="spec">PT1207F22</span> de Slot.it.</span><span class="t en">The rear tyres shall be the Slot.it <span class="spec">PT1207F22</span>.</span></p>
         <ul class="reflist"><li><a class="reflink" href="http://catalog.slot.it/product/product-details/?id=4882&parent=476" target="_blank" rel="noopener">catalog.slot.it · PT1207F22</a></li></ul>
+              <figure class="fig fig-part"><img src="img/c2/parts/neumaticos.jpg" alt="Neumáticos Slot.it (PT1207F22)" loading="lazy"><figcaption><span class="t es">Neumáticos Slot.it (PT1207F22)</span><span class="t en">Slot.it tyres (PT1207F22)</span></figcaption></figure>
       </section>
 
       <section class="block" id="llantas">
@@ -222,6 +244,7 @@
         <p><span class="t es">Las llantas delanteras podrán ser de plástico, aluminio o magnesio siempre en medidas <span class="spec">16,5 × 8 mm</span>. Se permite el uso de separadores entre la llanta y el chasis siempre que no sobresalgan de la carrocería en plano cenital.</span><span class="t en">The front wheels may be plastic, aluminium or magnesium, always in <span class="spec">16.5 × 8 mm</span>. Spacers between the wheel and the chassis are allowed provided they do not protrude beyond the body in top-down view.</span></p>
         <p><span class="t es">Las llantas traseras podrán ser de aluminio o magnesio con medidas <span class="spec">16,5 × 8</span> o <span class="spec">16,5 × 10 mm</span>. El conjunto llanta y neumático no podrá sobresalir de la carrocería vista ésta desde un plano cenital, excepto lo mínimo indispensable en modelos que sea imposible de cumplir.</span><span class="t en">The rear wheels may be aluminium or magnesium, with sizes <span class="spec">16.5 × 8</span> or <span class="spec">16.5 × 10 mm</span>. The wheel-and-tyre assembly may not protrude beyond the body when viewed from above, except for the bare minimum on models where it is impossible to comply.</span></p>
         <p><span class="t es">Las llantas serán de Slot.it y deberán llevar tapacubos obligatoriamente de diseño original de Grupo C. En su defecto se permitirán tapacubos de diseño BBS. Se permite eliminar los discos de freno de los tapacubos. <strong>No se permite el uso de tapacubos planos (4WD) de Slot.it de DTM o LMP.</strong></span><span class="t en">The wheels shall be Slot.it and must compulsorily carry wheel inserts of an original Group C design. Failing that, BBS-design inserts are allowed. The brake discs of the inserts may be removed. <strong>The use of flat (4WD) Slot.it inserts from DTM or LMP is not allowed.</strong></span></p>
+              <figure class="fig fig-part"><img src="img/c1/parts/llantas.jpg" alt="Llantas y tapacubos (16,5 mm)" loading="lazy"><figcaption><span class="t es">Llantas y tapacubos (16,5 mm)</span><span class="t en">Wheels and inserts (16.5 mm)</span></figcaption></figure>
       </section>
 
       <section class="block" id="tornilleria">
@@ -231,7 +254,10 @@
 
       <section class="block" id="transmision">
         <div class="head"><span class="num">09</span><h2><span class="t es">Transmisión</span><span class="t en">Transmission</span></h2></div>
-        <p><span class="t es">La transmisión es <strong>libre</strong> para la configuración en línea.</span><span class="t en">The transmission is <strong>free</strong> for the inline configuration.</span></p>
+        <p><span class="t es">El piñón será de 12 dientes y <strong>6,5 mm</strong> con referencia <span class="spec">PI6512e</span> (ergal) o <span class="spec">PS12</span> (latón).</span><span class="t en">The pinion shall be 12 teeth and <strong>6.5 mm</strong> with reference <span class="spec">PI6512e</span> (ergal) or <span class="spec">PS12</span> (brass).</span></p>
+        <p><span class="t es">La corona será libre de aluminio o nylon de 16 mm de diámetro con número de dientes libre entre los <strong>26z y 31z</strong>: <span class="spec">GA16xxe</span> y <span class="spec">GA16xxPl</span>.</span><span class="t en">The crown gear is free, aluminium or nylon, 16 mm in diameter, with a free number of teeth between <strong>26z and 31z</strong>: <span class="spec">GA16xxe</span> and <span class="spec">GA16xxPl</span>.</span></p>
+        <p><span class="t es">Se permite el uso de separadores en el tren trasero entre el cojinete y la corona así como el "stopper" y el cojinete o cuna.</span><span class="t en">Spacers may be used on the rear axle between the bushing and the crown, as well as the "stopper" and the bushing or pod.</span></p>
+              <figure class="fig fig-part"><img src="img/c1/parts/transmision.jpg" alt="Piñón y coronas" loading="lazy"><figcaption><span class="t es">Piñón y coronas</span><span class="t en">Pinion and crown gears</span></figcaption></figure>
       </section>
 
       <section class="block" id="ejes">
@@ -254,7 +280,9 @@
 
       <section class="block" id="motor">
         <div class="head"><span class="num">13</span><h2>Motor</h2></div>
-        <p><span class="t es">El motor será el <strong>Flat-6 «amarillo»</strong> de Slot.it (ref. <span class="spec">MN09</span>), de <strong>20.500 rpm</strong>. Se permite montarlo con la ventana orientada hacia abajo.</span><span class="t en">The motor shall be the Slot.it <strong>Flat-6 "yellow"</strong> (ref. <span class="spec">MN09</span>), <strong>20,500 rpm</strong>. It may be mounted with the window facing down.</span></p>
+        <p><span class="t es">El motor será el <strong>Flat 6 «amarillo»</strong> de Slot.it, referencia <span class="spec">MN09CH</span> (una ventana).</span><span class="t en">The motor shall be the Slot.it <strong>Flat 6 "yellow"</strong>, reference <span class="spec">MN09CH</span> (one window).</span></p>
+        <p><span class="t es">La orientación del motor será libre.</span><span class="t en">The motor orientation is free.</span></p>
+              <figure class="fig fig-part"><img src="img/c2/parts/motor.jpg" alt="Slot.it Flat-6" loading="lazy"><figcaption><span class="t es">Slot.it Flat-6</span><span class="t en">Slot.it Flat-6</span></figcaption></figure>
       </section>
 
       <section class="block" id="anexo">
@@ -270,28 +298,33 @@
               <li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Porsche_956_LH.pdf" target="_blank" rel="noopener">Porsche 956 LH · <span class="t es">montaje</span><span class="t en">assembly</span></a></li>
               <li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Porsche_956_KH.pdf" target="_blank" rel="noopener">Porsche 956 KH · <span class="t es">montaje</span><span class="t en">assembly</span></a></li>
             </ul>
+            <figure class="fig"><img src="img/c1/anexo/anexo-porsche.jpg" alt="Porsche 956/962 · modificaciones" loading="lazy"><figcaption><span class="t es">Modificaciones ilustradas (del reglamento)</span><span class="t en">Illustrated modifications (from the regulations)</span></figcaption></figure>
           </div>
 
           <div class="card">
             <h3>Mercedes Sauber C9</h3>
             <p><span class="t es">Se considera obligatorio mantener los detalles delanteros ubicados en la parte delantera del chasis evo 6. Se permite eliminar los tubos de escape, ya estén situados en la carrocería o en el chasis, así como el depósito de aceite situado bajo el alerón que no permite montar las suspensiones laterales y traseras correctamente. También se permite limar por el interior las partes más bajas de las tomas de aire traseras delante del alerón. El alerón debe conservar toda su estructura.</span><span class="t en">Keeping the front details located at the front of the evo 6 chassis is considered compulsory. Removing the exhaust pipes — whether on the body or on the chassis — is allowed, as is the oil tank located under the wing that prevents the side and rear suspensions from being fitted correctly. Filing, from the inside, the lowest parts of the rear air intakes in front of the wing is also allowed. The wing must keep its entire structure.</span></p>
             <ul class="reflist"><li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Sauber_C9.pdf" target="_blank" rel="noopener">Sauber C9 · <span class="t es">montaje</span><span class="t en">assembly</span></a></li></ul>
+            <figure class="fig"><img src="img/c1/anexo/anexo-sauber.jpg" alt="Mercedes Sauber C9 · modificaciones" loading="lazy"><figcaption><span class="t es">Modificaciones ilustradas (del reglamento)</span><span class="t en">Illustrated modifications (from the regulations)</span></figcaption></figure>
           </div>
 
           <div class="card">
             <h3>Mazda 787B</h3>
             <p><span class="t es">Existen dos carrocerías con cambios sustanciales en los laterales dependiendo de las versiones de chasis evo 4 y evo 6. Deberá respetarse la paridad de carrocería con el chasis, no pudiéndose cambiar en ningún sentido. El recambio de chasis evo 6 incluye los laterales que deben ser empleados en la versión evo 6 de carrocería. Se permitirá limar la carrocería evo 4 para adaptarle el chasis evo 6 siempre que se haga sin excesos, sin chapuzas y de forma correcta. Quedará a juicio del verificador.</span><span class="t en">There are two bodies with substantial changes to the sides depending on the evo 4 and evo 6 chassis versions. Body-to-chassis parity must be respected and may not be swapped in either direction. The evo 6 chassis replacement includes the side panels that must be used on the evo 6 body version. Filing the evo 4 body to adapt the evo 6 chassis is allowed, provided it is done without excess, without botched work and correctly. This is at the scrutineer's discretion.</span></p>
+            <figure class="fig"><img src="img/c1/anexo/anexo-mazda.jpg" alt="Mazda 787B · ejemplo chasis evo 6 con carrocería evo 4" loading="lazy"><figcaption><span class="t es">Modificaciones ilustradas (del reglamento)</span><span class="t en">Illustrated modifications (from the regulations)</span></figcaption></figure>
           </div>
 
           <div class="card">
             <h3>Jaguar XJR6 / 9 / 12</h3>
             <p><span class="t es">Se permite eliminar el carenado de las ruedas traseras así como limar y eliminar los anclajes de los mismos de manera que no molesten con los neumáticos. Se permite eliminar el panel lateral interior de los XJR9 así como los trapecios de suspensión traseros y el motor simulado de la parte superior de la carrocería. La toma de aire del freno situada sobre la corona se permite también eliminarla o limarla para evitar que roce con la corona. Los tubos de escape deben permanecer y se permite encolarlos al alerón para evitar que se rompan con la flexión del mismo. Se permite eliminar el "spoiler" delantero del XJR12 en fotograbado.</span><span class="t en">Removing the rear wheel fairings is allowed, as is filing and removing their mounts so that they do not interfere with the tyres. Removing the inner side panel of the XJR9 is allowed, as well as the rear suspension wishbones and the dummy motor on the top of the body. The brake air intake located above the crown may also be removed or filed to prevent it from rubbing against the crown. The exhaust pipes must remain and may be glued to the wing to prevent them from breaking with its flexing. The photo-etched front "spoiler" of the XJR12 may be removed.</span></p>
+            <figure class="fig"><img src="img/c1/anexo/anexo-jaguar-xjr.jpg" alt="Jaguar XJR6/9/12 · modificaciones" loading="lazy"><figcaption><span class="t es">Modificaciones ilustradas (del reglamento)</span><span class="t en">Illustrated modifications (from the regulations)</span></figcaption></figure>
           </div>
 
           <div class="card">
             <h3>Nissan R89C / R90V</h3>
             <p><span class="t es">Se permite eliminar el carenado de las ruedas traseras y las derivas aerodinámicas interiores de los laterales con los escapes que impiden el uso de amortiguadores laterales.</span><span class="t en">Removing the rear wheel fairings and the inner aerodynamic fins of the sides with the exhausts that prevent the use of side dampers is allowed.</span></p>
             <ul class="reflist"><li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Nissan_R89C.pdf" target="_blank" rel="noopener">Nissan R89C · <span class="t es">montaje</span><span class="t en">assembly</span></a></li></ul>
+            <figure class="fig"><img src="img/c1/anexo/anexo-nissan.jpg" alt="Nissan R89C/R90V · modificaciones" loading="lazy"><figcaption><span class="t es">Modificaciones ilustradas (del reglamento)</span><span class="t en">Illustrated modifications (from the regulations)</span></figcaption></figure>
           </div>
 
           <div class="card">
@@ -301,6 +334,7 @@
               <li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Lancia_LC2_84.pdf" target="_blank" rel="noopener">Lancia LC2 84 · <span class="t es">montaje</span><span class="t en">assembly</span></a></li>
               <li><a class="reflink" href="http://slot.it/Download/Kit_Assembly/Lancia_LC2_88.pdf" target="_blank" rel="noopener">Lancia LC2 88 · <span class="t es">montaje</span><span class="t en">assembly</span></a></li>
             </ul>
+            <figure class="fig"><img src="img/c1/anexo/anexo-lancia.jpg" alt="Lancia LC2 1984 · modificaciones" loading="lazy"><figcaption><span class="t es">Modificaciones ilustradas (del reglamento)</span><span class="t en">Illustrated modifications (from the regulations)</span></figcaption></figure>
           </div>
         </div>
       </section>
@@ -320,7 +354,7 @@
     <div class="foot-top">
       <div class="foot-brand">
         <div class="display"><span class="r">24</span> HORES LLINARS DEL VALLÈS</div>
-        <p><span class="t es">Reglamento Técnico Grupo C · v1.7 — Mayo 2025 · Club Slot Llinars</span><span class="t en">Group C Technical Regulations · v1.7 — May 2025 · Club Slot Llinars</span></p>
+        <p><span class="t es">Reglamento Técnico Grupo C · v2.0 — Julio 2026 · Club Slot Llinars</span><span class="t en">Group C Technical Regulations · v2.0 — July 2026 · Club Slot Llinars</span></p>
       </div>
       <a class="foot-back" href="index.html"><span class="t es">← Volver a la web</span><span class="t en">← Back to site</span></a>
     </div>
