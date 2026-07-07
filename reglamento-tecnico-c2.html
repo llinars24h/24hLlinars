@@ -386,11 +386,11 @@ function setLang(l){
     ? "Technical Regulations C2 · Group C — 24 Hores Llinars del Vallès"
     : "Reglamento Técnico C2 · Grupo C — 24 Hores Llinars del Vallès";
   document.querySelectorAll('.lang-sw button').forEach(b=>b.classList.toggle('active', b.dataset.l===l));
-  try{localStorage.setItem('reglaLang', l);}catch(e){}
+  try{localStorage.setItem('lang24h', l);}catch(e){}
 }
 (function(){
-  let l; try{l=localStorage.getItem('reglaLang');}catch(e){}
-  if(!l){const n=(navigator.language||'es').slice(0,2).toLowerCase(); l=['ca','es','en','fr','it'].includes(n)?n:'es';}
+  let l; try{l=localStorage.getItem('lang24h');}catch(e){}
+  if(!l){const n=(navigator.language||'es').slice(0,2).toLowerCase(); l=['ca','es','en','fr','it'].includes(n)?n:'ca';}
   setLang(l);
   document.querySelectorAll('.lang-sw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
 })();
